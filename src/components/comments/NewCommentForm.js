@@ -5,6 +5,7 @@ import classes from "./NewCommentForm.module.css";
 import useHttp from "../../hooks/use-http";
 import { addComment } from "../../lib/api";
 import LoadingSpinner from "../UI/LoadingSpinner";
+import { useNavigate } from "react-router-dom";
 
 const NewCommentForm = (props) => {
   const commentTextRef = useRef();
@@ -15,10 +16,10 @@ const NewCommentForm = (props) => {
 
   const submitFormHandler = (event) => {
     event.preventDefault();
-    const enteredText = commentTextRef.current.value;
+    const enteredText = commentTextRef.current.value.trim();
 
     // optional: Could validate here
-    if (enteredText.trim().length === 0) {
+    if (enteredText.length === 0) {
       alert("Please Enter Valid Comment");
       return;
     }
