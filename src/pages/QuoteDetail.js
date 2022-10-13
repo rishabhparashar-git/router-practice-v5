@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useParams, Link, Route, Routes, useNavigate } from "react-router-dom";
+import { useParams, Link, Route, Routes } from "react-router-dom";
 
 import Comments from "../components/comments/Comments";
 import HighlightedQuote from "../components/quotes/HighlightedQuote";
@@ -9,8 +9,6 @@ import useHttp from "../hooks/use-http";
 import { getSingleQuote } from "../lib/api";
 
 export default function QuoteDetail() {
-  const navigate = useNavigate();
-
   const params = useParams();
   const quoteId = params.quoteId;
   // const quoteData = QUOTES.find((quote) => quote.id === quoteId);

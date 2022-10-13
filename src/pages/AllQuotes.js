@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 
 import QuoteList from "../components/quotes/QuoteList";
-import QUOTES from "../components/quotes/DUMMYQUOTES";
 import LoadingSpinner from "../components/UI/LoadingSpinner";
 import NoQuotesFound from "../components/quotes/NoQuotesFound";
 

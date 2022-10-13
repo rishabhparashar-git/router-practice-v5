@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams} from "react-router-dom";
 
 import classes from "./Comments.module.css";
 import NewCommentForm from "./NewCommentForm";
@@ -20,7 +20,6 @@ const Comments = () => {
     sendRequest,
     data: loadedComments,
     status,
-    error,
   } = useHttp(getAllComments);
 
   useEffect(() => {

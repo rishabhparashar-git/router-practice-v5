@@ -1,10 +1,4 @@
-import {
-  Redirect,
-  Route,
-  Routes,
-  BrowserRouter,
-  Navigate,
-} from "react-router-dom";
+import { Route, Routes, BrowserRouter, Navigate } from "react-router-dom";
 
 import AllQuote from "./pages/AllQuotes";
 import NewQuote from "./pages/NewQuote";
@@ -20,7 +14,6 @@ function App() {
         <Routes>
           {/* in v5 we need exact for exactly matching the path but,
           in v6 it always looks for exact matches, but if you intentionally want that behaviour when multiple paths match the url you can use (/*) after the path  */}
-
           <Route path="/" element={<Navigate to="/quotes" replace />} />
           <Route path="/new-quote" element={<NewQuote />} />
           <Route path="/quotes" element={<AllQuote />} />

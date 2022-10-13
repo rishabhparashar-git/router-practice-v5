@@ -1,5 +1,4 @@
-import { useRef, useState } from "react";
-import { Prompt } from "react-router-dom";
+import { useRef } from "react";
 
 import Card from "../UI/Card";
 import LoadingSpinner from "../UI/LoadingSpinner";
